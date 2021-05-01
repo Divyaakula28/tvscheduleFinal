@@ -26,7 +26,7 @@ SECRET_KEY = '!@p&3eg-d#t4zs(!pvz)*qv7y5657mljvjq27qsl-l#(vod)h^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','tvschedule.herokuapp.com']
 
 
 # Application definition
