@@ -1,0 +1,39 @@
+{% extends "h1.html" %}
+{% block body %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Web Page</title>
+<style>
+body{ margin:0px }
+div#top{ background:url('{% static 'images/back4.jpg' %}') repeat-x; height:73px; font-size:36px; padding:20px 0px 0px 20px;  }
+div#middle{ min-width:800px; }
+div#middle > div{ float:left; width:25%; }
+div#middle > div > div{ border:#000 1px solid; padding: 20px; }
+div#middle > div > div > img{ width:100%; }
+div#bottom{ clear:left; background:#666; height:200px; }
+</style>
+</head>
+<body>
+<div id="middle">
+  <body id="bg" style="background-image:url('{% static 'images/total.jpg' %}');">
+<div class="container p-6 my-4  text-white border w3-round-xlarge" style="    width: 500px;border: 2px solid red;padding: 10px;
+">
+<div class="box" style="position: relative;max-width: 1300px;padding: 10px;background:rgba(255,255,102,.5);box-shadow: 0 5px 15px rgba(0,0,0,.2);">
+  <fieldset>
+  <h2 style="color:red;background-color:black;  margin: 0 0 20px;padding: 0;font-size: 30px;text-transform: uppercase;
+">TELEVISION CHANNEL SHEDULE</h2></fieldset>
+  <p style="background-color: #ffff99;color: #5B2C6F;font-weight: 900; margin: 0 0 20px;  padding: 0; 
+">You can search for different channel schedule and can know or get present running programs,shows,news....soo....on</p>
+  <p style="background-color: #ffff99;color: #5B2C6F;font-weight: 900; margin: 0 0 20px;  padding: 0; 
+">for more Go to <"DISCRIPTIVE"></p>
+</div>
+</div>
+</body>
+</form>
+</head>
+</body>
+{% endblock %}
+</html>

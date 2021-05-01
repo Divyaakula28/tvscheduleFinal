@@ -1,0 +1,63 @@
+{% extends "h1.html" %}
+{% block body %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TV Channel shedule</title>   
+        <form action="{% url 'loc' %}" method="POST">
+            {% csrf_token %}
+    </head>
+    <body>
+        <div class="container p-6 my-4 bg-secondary text-white ">
+        <div id="lang" class="lang">
+          <h1><u style="color:red;text-align:center;font-size:30px;font-family:Brush Script MT;">Complete Schedule</u></h1><br></br>
+        <label style="color:blue,text-align:center" >Select Your Channel: </label>    
+        <select id="select" name="select" value="select">
+        </select><br></br>
+        <input type="submit" value="OK">
+        <script>
+            var d={{x|safe}};
+            var select = document.getElementById("select"),
+                     arr =d;
+             
+             for(var i = 0; i < arr.length; i++)
+             {
+                k=arr[i];  
+                var option = document.createElement("OPTION"),
+                txt = document.createTextNode(k);
+                option.appendChild(txt);
+                option.setAttribute("value",k);
+                select.insertBefore(option,select.lastChild);
+             }
+             
+        </script>
+    </div>
+</div>
+    </body>
+   <style>
+ @media (min-width: 1200px) {
+  .container {
+    width: 500px;
+    border-radius: 0px 50px  0px 20px;
+    border: 5px solid #A2D9CE;
+    
+  }
+}
+    div.lang{
+  text-align: center;  
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 65px;
+  padding-left: 0px;
+    }
+
+
+}​ 
+</style> 
+   <body id="bg" style="background-image:url('{% static 'images/back4.jpg' %}');"></body>
+
+
+{% endblock %}
+
+</html>

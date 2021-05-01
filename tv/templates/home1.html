@@ -1,0 +1,55 @@
+{% extends "h1.html" %}
+{% block body %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head> 
+        <title>TV Channel shedule</title>          
+        <meta name = "viewport" content = "width = device-width, initial-scale = 0.5">
+        <link rel="stylesheet" type="text/css" href="#">    
+      <form action="#" method="POST" style="color:blue; text-align:center;">
+            {% csrf_token %}4
+<body id="bg" style="background-image:url('{% static 'images/total.jpg' %}');">
+<div class="d-flex justify-content-center">
+	<div class="container p-6 my-4  text-white border w3-round-xlarge">
+<div class="box">
+	<fieldset>
+  <h2 style="color:red;background-color:black;">TELEVISION CHANNEL SHEDULE</h2></fieldset>
+  <p style="background-color: #ffff99;color: #5B2C6F;font-weight: 900;">You can search for different channel schedule and can know or get present running programs,shows,news....soo....on</p>
+  <p style="background-color: #ffff99;color: #5B2C6F;font-weight: 900;">for more Go to <"DISCRIPTIVE"></p>
+</div>
+</div>
+</div>	
+
+</body>
+</form>
+</head>
+<style type="text/css">
+
+ .container {
+    width: 500px;
+    border: 2px solid red;
+    margin-top: 50%;
+  padding: 10px;
+ }
+.box{
+	position: relative;
+	max-width: 1300px;
+	padding: 10px;
+
+	background:rgba(255,255,102,.5);
+	box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+.box h2{
+	margin: 0 0 20px;
+	padding: 0;
+	font-size: 30px;
+	text-transform: uppercase;
+}
+.box p{
+margin: 0 0 20px;
+	padding: 0;	
+}
+</style>
+{% endblock %}
+</html>

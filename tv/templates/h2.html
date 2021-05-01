@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>schedule</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/style1.css'%}">
+</head>
+<body>
+	<header>
+		<img class="logo" src="{% static 'images/mainlogo1.png' %}" alt="logo">
+		<nav>
+			<ul class="nav__links">
+				<li><a href="{% url 'home' %}" >Home</a></li>
+				<li><a href="{% url 'drop' %}">Search</a></li>
+				
+				<li><a href="{% url 'dis' %}">Discriptive</a></li>
+
+			</ul>
+		</nav>
+	</header>
+
+</body>
+</html>

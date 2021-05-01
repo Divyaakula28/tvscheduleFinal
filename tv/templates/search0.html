@@ -1,0 +1,58 @@
+{% extends "h1.html" %}
+{% block body %}
+{% load static%}
+<!DOCTYPE html>  
+<html>  
+    <head> 
+        <title>TV Channel shedule</title>          
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel="stylesheet" type="text/css" href="{%static 'css/search0.css'%}">    
+      <form action="{% url 'drop' %}" method="POST" style="color:blue; text-align:center;">
+            {% csrf_token %}  
+          <div class="container p-6 my-4   w3-round-xlarge" style="background:#d3d3d3;width: 500px; border-radius:  50px 20px;">
+            <div id="lang" class="lang">
+              <h1><u style="color:red;text-align:center;font-size:30px;font-family:Brush Script MT;">Complete Schedule</u></h1><br></br>
+                <label style="color:#283747;text-align:center;" >Select Your Language: </label>
+            <select id="lang" name="lang" class="due">                  
+                <option value="Telugu" selected="selected">Telugu</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Malayalam">Malayalam</option>
+                <option value="English">English</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Kannada">Kannada</option>
+                <option value="Gujarati">Gujarati</option>
+                <option value="French">French</option>
+                <option value="Marathi">Marathi</option>
+                <option value="Punjabi">Punjabi</option>
+                <option value="Urdu">Urdu</option>
+                <option value="Bengali">Bengali</option>
+                <option value="Odia">Odia</option>
+                <option value="Nepali">Nepali</option>
+                <option value="Assamese">Assamese</option>
+                <option value="Bhojpuri">Bhojpuri</option>
+            </select><br></br> 
+            <div > <input type="submit" value="proceed" style="margin-left: 20%" ></div>
+            
+        </div>
+    </div>
+        </form> 
+        </head> 
+   <body id="bg" style="background-image:url('{% static 'images/back4.jpg' %}');"></body>
+    
+    
+   
+<style>
+
+div.lang{
+  text-align: center;  
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 65px;
+  padding-left: 0px;
+}
+
+
+</style>
+{% endblock %}
+
+    </html> 
