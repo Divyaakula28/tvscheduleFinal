@@ -1,1 +1,1 @@
-web: gunicorn tv.wsgi --log-file -
+web: gunicorn tvschedule.wsgi --log-file -
