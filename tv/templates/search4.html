@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>schedule</title>
+</head>
+<body>
+</table>
+</body>
+<style type="text/css">
+  table, th, td {
+  border: 1px solid black;
+  align:center;
+  text-align: center;
+}
+.table button{
+  background-color: #4caf50;
+}
+</style>
+<script>
+
+  var k="{{z}}";
+  var tm='{{tim}}';
+  var pro='{{program}}';
+  var v='{{v}}';
+  var w='{{w}}';
+
+  tm=tm.slice(1,-1);
+  tm=tm.split(',');
+  for(var i = 0; i<=k-1; i++){
+    y = tm[i].replace(/''/g, "");
+    y=y[1];
+    document.write(y)
+  }
+
+
+  pro=pro.slice(1,-1);
+  
+  pro=pro.split(',');
+
+
+  v=v.slice(1,-1);
+  v=v.slice(1,-1);
+  var ret =v.replace('"','');
+  v=v.replace(/[0-9,'&#;]/g,'');
+  v=v.split('*');
+  //document.write(v)
+  var table='';
+  k=parseInt(k, 10);
+  //document.write(v);
+  for (var i = 0; i<=k-1; i++) {
+    l=pro[i] 
+
+    document.writeln(l);
+    document.write("<br />");    
+  }
+document.write(v);
+
+  
+</script>
+<input type="button" value="Button" name="B3" onclick="alert('hello');"></td>
+
+</html>

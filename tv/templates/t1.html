@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script>
+            function random_function()
+            {
+                var a=document.getElementById("input").value;
+                if(a==='Telugu')
+             {
+                  var k='{{x}}';
+                  d=k.slice(1,-1);
+                  arr=d.split(',');
+                }                             
+                var string="";
+             
+                for(i=0;i<arr.length;i++)
+                {
+                    string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+                }
+                document.getElementById("output").innerHTML=string;
+            }
+        </script>
+    </head>
+    <body>
+      <img src="{% static 'images/logo3.png' %}" class="img-circle" alt="Cinque Terre" height="50%">
+
+        <select id="input" onchange="random_function()">
+            <option>select language</option>
+            <option>Telugu</option>
+            <option>Hindi</option>
+            <option>Malayalam</option>
+            <option>English</option>
+            <option>Tamil</option>
+            <option>Kannada</option>
+            <option>Gujarati</option>
+            <option>French</option>
+            <option>Marathi</option>
+            <option>Punjabi</option>
+            <option>Urdu</option>
+            <option>Bengali</option>
+            <option>Odia</option>
+            <option>Nepali</option>
+            <option>Assamese</option>
+            <option>Bhojpuri</option>                            
+        </select>
+        <div>
+           <select id="output" onchange="random_function1()">
+    
+        </div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+{% extends "h1.html" %}
+{% block body %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>schedule</title>
+  <link rel="stylesheet" type="text/css" href="{%static 'css/table.css'%}">
+</head>
+<body>
+</table>
+</body>
+
+<script>
+  var t={{x1|safe}}
+  var c={{x2|safe}};	
+  var m={{x3|safe}};
+  var r={{x4|safe}};
+  var i; 
+  document.write("<table class=\"center\"><tr><th>Time</th><th>Channel Name</th><th>Movie Name</th><th>Actors</th></tr>")
+for (i=0 ;i<t.length;i++){
+       document.write("<tr class=\"content-table\" style=\"color: #000000\"><td >"+t[i]+"</td><td >"+c[i]+"</td><td >"+m[i]+"</td><td >"+r[i]+"</td></tr>"); } 
+
+       
+ 
+</script>
+{% endblock%}
+</html>

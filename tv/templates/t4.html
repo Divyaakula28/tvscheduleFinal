@@ -1,0 +1,26 @@
+<html>
+<body>
+<script language="JavaScript">
+var sex = ["male", "female", "unknown"];
+var html = [];
+for (var i = 0; i < sex.length; i++) {
+  html.push("<option>" + sex[i] + "</option>")
+}
+document.getElementById("sex").innerHTML = html.join("");
+</script>
+<form name="demo">
+  <table id="demo">
+    <th>Demographics</th>
+    <tr>
+      <td>Sex</td>
+      <td>
+        <select id = "sex">
+
+        </select>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+
+</html>
