@@ -4,13 +4,35 @@ import requests
 import numpy as np
 import json
 from datetime import datetime
+from .models import User
+from django.db.models import Q
 
 
 
 # Create your views here.
 def home(req):
+	def get_ip(req):
+		address=req.META.get('HTTP_X_FORWARDED_FOR')
+		if address:
+			ip=address.split(',')[-1].strip()
+		else:
+			ip=req.META.get('REMOTE_ADDR')	
+		return ip
+	ip=get_ip(req)
+	u=User(user=ip)	
+	result=User.objects.filter(Q(user__icontains=ip))
+	if len(result)==1:
+		print("user exist")
+	elif len(result)>1:
+		print('user exist')	
+	else:
+		u.save()
+		print("user")
+	count=User.objects.all().count()	
+	print("totoal users",count)
 	return render(req,'home1.html')
-
+def home1(req):
+	return render(req,'options.html')
 def loc(req):
 	if req.method=='POST':
 		channel=req.POST['select']
