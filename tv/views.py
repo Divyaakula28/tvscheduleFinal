@@ -3,6 +3,7 @@ from django.http import HttpResponse
 import requests
 import numpy as np
 import json
+import pytz
 from datetime import datetime
 from .models import User
 from django.db.models import Q
@@ -245,10 +246,10 @@ def present(req):
 				k=x[i].split(':')
 				tt.append(k[0])
 
-		now = datetime.now()
-		ct = now.strftime("%H")
+		IST = pytz.timezone('Asia/Kolkata')
+		datetime_ist = datetime.now(IST)
+		ct=datetime_ist.strftime(' %H')
 		ct=int(ct)
-		print("hello")
 		print(ct)
 		tt=tt[:-1]
 		for i in range(len(tt)):
