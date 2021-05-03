@@ -248,6 +248,8 @@ def present(req):
 		now = datetime.now()
 		ct = now.strftime("%H")
 		ct=int(ct)
+		print("hello")
+		print(ct)
 		tt=tt[:-1]
 		for i in range(len(tt)):
 			tt1=int(tt[i])
