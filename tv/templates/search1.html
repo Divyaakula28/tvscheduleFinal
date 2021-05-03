@@ -1,0 +1,66 @@
+{% extends "h1.html" %}
+{% block body %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TV Channel shedule</title>   
+        <form action="{% url 'loc' %}" method="POST">
+            {% csrf_token %}
+    </head>
+    <body>
+        <div class="hello">
+        <div id="lang" class="lang" style=" text-align: center;  padding-top: 50px; padding-right: 30px;padding-bottom: 65px;padding-left: 0px;">
+          <h1><u style="color:red;text-align:center;font-size:30px;font-family:Brush Script MT;">Complete Schedule</u></h1><br></br>
+        <label style="color:blue,text-align:center;font-size:20px;" >Select Your Channel: </label>    
+        <select id="select" name="select" value="select" style="font-size:20px;">
+        </select><br></br>
+        <input type="submit" value="OK">
+        <script>
+            var d={{x|safe}};
+            var select = document.getElementById("select"),
+                     arr =d;
+             
+             for(var i = 0; i < arr.length; i++)
+             {
+                k=arr[i];  
+                var option = document.createElement("OPTION"),
+                txt = document.createTextNode(k);
+                option.appendChild(txt);
+                option.setAttribute("value",k);
+                select.insertBefore(option,select.lastChild);
+             }
+             
+        </script>
+    </div>
+</div>
+<style type="text/css">
+.hello {
+  background-color: #C9E9EB;
+  margin: auto;
+
+  width: 40%;
+  padding: 10px;
+  position: relative;
+  left :30px;
+  top:200px;
+  border-style: dashed;
+  border: 2px solid black;
+  border-radius: 12px;
+
+}
+
+.hello lang{
+  background-color:tomato;
+  color: white;
+}
+
+
+
+
+</style>
+
+
+{% endblock %}
+
+</html>
