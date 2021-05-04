@@ -28,7 +28,7 @@ def home(req):
 		print('user exist')	
 	else:
 		u.save()
-		print("user")
+		#print("user")
 	count=User.objects.all().count()	
 	print("totoal users",count)
 	return render(req,'home1.html')
@@ -250,7 +250,7 @@ def present(req):
 		datetime_ist = datetime.now(IST)
 		ct=datetime_ist.strftime(' %H')
 		ct=int(ct)
-		print(ct)
+		#print(ct)
 		tt=tt[:-1]
 		for i in range(len(tt)):
 			tt1=int(tt[i])
